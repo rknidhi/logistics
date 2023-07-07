@@ -1,0 +1,130 @@
+<div class="row">
+    <div class="card card-outline-primary">
+        <div class="card-header">
+            <h4 class="m-b-0 text-white">Add Head Master</h4>
+        </div>
+        <div class="card-body myModal">
+            <form class="m-t-40 row" id="form_validation" novalidate action="<?= $base_url ?>accounts/head_master/add" method="POST">
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>Head Name <span class="text-danger">*</span></h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_name]" class="form-control" required data-validation-required-message="This field is required"></div>
+                </div>
+
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>Address</h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_address]" class="form-control"></div>
+                </div>
+
+
+<!--                <div class="form-group col-md-6 m-t-10">
+                    <h5>Financial Year Period (From)</h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_fyf]" class="form-control singledate" required data-validation-required-message="This field is required"></div>
+                </div>
+
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>Financial Year Period (To)</h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_fyt]" class="form-control singledate" required data-validation-required-message="This field is required"></div>
+                </div>-->
+
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>GST No.</h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_gstno]" class="form-control"></div>
+                </div>
+
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>Mobile No.</h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_mobile]" class="form-control"></div>
+                </div>
+
+
+
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>Email</h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_email]" class="form-control"></div>
+                </div>
+
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>Website</h5>
+                    <div class="controls">
+                        <input type="text" name="data[head_website]" class="form-control"></div>
+                </div>
+
+                <div class="form-group col-md-6 m-t-10">
+                    <h5>Currency</h5>
+                    <div class="controls">
+                        <select class="form-control" name="data[currency]" required aria-invalid="false">
+                            <option value="">Select</option>
+                            <?php
+                            foreach ($this->config->item('currency') as $key => $currency):
+                                echo '<option value = "' . $key . '">' . $currency . '</option>';
+                            endforeach;
+                            ?>
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group col-md-12 m-t-10 text-center">
+                    <div class="col-sm-12">
+                        <button class="btn btn-success" name="update" value="Update">Add New</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Column -->
+</div>
+<link href="<?= $base_url ?>assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+<script src="<?= $base_url ?>assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="<?= $base_url ?>assets/js/validation.js"></script>
+<script>
+    !function (window, document, $) {
+        "use strict";
+        $("input,select,textarea").not("[type=submit]").jqBootstrapValidation({
+            submitSuccess: function ($form, event) {
+                var form_data = $form.serialize();
+                document.getElementById('form_validation').reset();
+                $.ajax({
+                    type: 'POST',
+                    url: $form.attr('action'),
+                    data: form_data,
+                    success: function (data)
+                    {
+                        var response = JSON.parse(data);
+                        if (response.status == 'success') {
+                            // document.getElementById('form_validation').reset();
+                            alertify.success(response.status_message, 100);
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 1000);
+//                            var msg = alertify.warning(' <button class="btn btn-danger btn-icon btn-xs" id="1"><i class="fa fa-cogs"></i></button> Click to Reload...', 10);
+//                            msg.callback = function (isClicked) {
+//                                if (isClicked)
+//                                    window.location.reload();
+//
+//                            };
+                        } else {
+                            alertify.error(response.status_message);
+                        }
+                    }
+                });
+                // will not trigger the default submission in favor of the ajax function
+                event.preventDefault();
+            }
+        });
+    }(window, document, jQuery);
+
+    $('.singledate').datepicker({
+        autoclose: true,
+        todayHighlight: true,
+        format: 'dd-mm-yyyy',
+    });
+</script>

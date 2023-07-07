@@ -1,0 +1,361 @@
+.card .card-header-rose .card-icon, .card .card-header-rose .card-text, .card .card-header-rose:not(.card-header-icon):not(.card-header-text), .card.bg-rose, .card.card-rotate.bg-rose .back, .card.card-rotate.bg-rose .front {
+    background: linear-gradient(60deg,#ec407a,#d81b60);
+}
+
+.login-register .login-box .card-header {
+    margin-top: -40px!important;
+    margin-bottom: 20px;
+}
+
+.btn.btn-rose.btn-link, .btn.btn-rose.btn-link:active, .btn.btn-rose.btn-link:focus, .btn.btn-rose.btn-link:hover {
+    background-color: #e91e63!important;
+    color: #fff;
+}
+
+.btn.btn-link:active, .btn.btn-link:focus, .btn.btn-link:hover {
+    text-decoration: none!important;
+}
+
+.header-filter::before {
+    background:rgba(0,0,0,.5);
+}
+.header-filter:after, .header-filter:before {
+position: absolute;
+z-index: 1;
+width: 100%;
+height: 100%;
+display: block;
+left: 0;
+top: 0;
+content: "";
+}
+.card .card-header-rose .card-icon, .card .card-header-rose .card-text, .card .card-header-rose:not(.card-header-icon):not(.card-header-text) {
+    box-shadow :0 4px 20px 0 rgba(0,0,0,.14),0 7px 10px -5px rgba(233,30,99,.4)
+}
+
+.card .card-header-warning .card-text {
+    background: linear-gradient(60deg, #ffa726, #fb8c00);
+}
+
+.card .card-header-warning .card-text {
+    box-shadow: 0 4px 20px x0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(255, 152, 0, .4);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+}
+
+.card {
+    border: 0;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    border-radius: 6px;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    z-index:2
+
+}
+
+.card {
+    margin-bottom: 10px
+}
+
+.card [class*=card-header-] .card-text {
+    float: none;
+    display: inline-block;
+    margin-right: 0;
+}
+
+.card-title,
+.card-category {
+    color: #fff
+}
+
+.card .card-subtitle {
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #99abb4
+}
+
+.card [class*=card-header-] .card-icon,
+.card [class*=card-header-] .card-text {
+    border-radius: 3px;
+    background-color: #999;
+    padding: 15px;
+    margin-top: -30px;
+   /* margin-right: 15px;*/
+    float: left;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: none !important;
+}
+
+.card-inverse .card-blockquote .blockquote-footer,
+.card-inverse .card-link,
+.card-inverse .card-subtitle,
+.card-inverse .card-text {
+    color: rgba(255, 255, 255, 0.65)
+}
+
+.card-success {
+    background: #26c6da;
+    border-color: #26c6da
+}
+
+.card-danger {
+    background: #fc4b6c;
+    border-color: #fc4b6c
+}
+
+.card-warning {
+    background: #ffb22b;
+    border-color: #ffb22b
+}
+
+.card-info {
+    background: #1e88e5;
+    border-color: #1e88e5
+}
+
+.card-primary {
+    background: #7460ee;
+    border-color: #7460ee
+}
+
+.card-dark {
+    background: #2f3d4a;
+    border-color: #2f3d4a
+}
+
+.card-megna {
+    background: #00897b;
+    border-color: #00897b
+}
+
+.button-group .btn {
+    margin-bottom: 5px;
+    margin-right: 5px
+}
+
+.no-button-group .btn {
+    margin-bottom: 5px;
+    margin-right: 0px
+}
+
+.btn .text-active {
+    display: none
+}
+
+.btn.active .text-active {
+    display: inline-block
+}
+
+.btn.active .text {
+    display: none
+}
+
+.card-actions {
+    float: right
+}
+
+.card-actions a {
+    cursor: pointer;
+    color: #99abb4;
+    opacity: 0.7;
+    padding-left: 7px;
+    font-size: 13px
+}
+
+.card-actions a:hover {
+    opacity: 1
+}
+
+.card-columns .card {
+    margin-bottom: 20px
+}
+
+.collapsing {
+    -webkit-transition: height .08s ease;
+    -o-transition: height .08s ease;
+    transition: height .08s ease
+}
+
+.card-info {
+    background: #1e88e5;
+    border-color: #1e88e5
+}
+
+.card-primary {
+    background: #7460ee;
+    border-color: #7460ee
+}
+
+.card-outline-info {
+    border-color: #1e88e5
+}
+
+.card-outline-info .card-header {
+    background: #1e88e5;
+    border-color: #1e88e5
+}
+
+.card-outline-inverse {
+    border-color: #2f3d4a
+}
+
+.card-outline-inverse .card-header {
+    background: #2f3d4a;
+    border-color: #2f3d4a
+}
+
+.card-outline-warning {
+    border-color: #ffb22b
+}
+
+.card-outline-warning .card-header {
+    background: #ffb22b;
+    border-color: #ffb22b
+}
+
+.card-outline-success {
+    border-color: #26c6da
+}
+
+.card-outline-success .card-header {
+    background: #26c6da;
+    border-color: #26c6da
+}
+
+.card-outline-danger {
+    border-color: #fc4b6c
+}
+
+.card-outline-danger .card-header {
+    background: #fc4b6c;
+    border-color: #fc4b6c
+}
+
+.card-outline-primary {
+    border-color: #7460ee
+}
+
+.card-outline-primary .card-header {
+    background: purple;
+    border-color: purple;
+}
+
+.bc-colored .breadcrumb-item,
+.bc-colored .breadcrumb-item a {
+    color: #ffffff
+}
+
+.bc-colored .breadcrumb-item.active,
+.bc-colored .breadcrumb-item a.active {
+    opacity: 0.7
+}
+
+.bc-colored .breadcrumb-item+.breadcrumb-item:before {
+    color: rgba(255, 255, 255, 0.4)
+}
+
+/* BTN*/
+
+.login-box {
+    margin-top: -30px;
+    
+}
+
+@media screen and (max-width: 768px){
+    .login-box {
+        margin-top: 30px;
+    }
+}
+
+.material-icons {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 2px;
+}
+
+.card [class*=card-header-] .card-icon,
+.card [class*=card-header-] .card-text {
+    border-radius: 8px;
+    background-color: #999;
+    padding-bottom: 13px;
+    margin-top: -20px;
+    margin-right: 15px;
+    float: left;
+   
+}
+
+.card .card-header-primary .card-icon {
+    
+}
+
+.card [class*=card-header-] {
+    margin: 0 15px;
+    padding: 0;
+    position: relative;
+}
+
+.card .card-header {
+    z-index: 3 !important;
+}
+
+.card .card-header {
+    /*    border-bottom: none;
+        background: 0 0;*/
+}
+
+.card .card-header.card-header-icon i,
+.card .card-header.card-header-text i {
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    line-height: 23px;
+    color: #000;
+}
+
+
+.card .card-header-primary .card-icon {
+    background: none;
+    
+}
+
+.card .card-header.card-header-icon .card-title {
+    margin-top: 15px;
+color: #fff;
+background: purple;
+padding: 10px;
+border-radius: 4px;
+margin: 0px -15px;
+font-weight: 500;
+text-align: center;
+}
+
+.color-white {
+    color: #fff
+}
+
+.trash {
+    color: #f44336 !important;
+}
+
+.edit {
+    color: #4caf50 !important;
+    margin: 2px;
+}
+
+.card-header-primary {background: none !important}
